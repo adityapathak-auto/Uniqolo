@@ -109,7 +109,7 @@
     <p style="text-align: left;"> Your items will be reserved for the next 30 minutes after the “Checkout” button has been pressed.
     </p>
     <a href="pament1.html"><button id="outbtn">CHECKOUT</button></a>
-    <button id="shopbtn">CONTINUE SHOPPING</button>
+    <button id="shopbtn"><a href="HomePage.html" style="text-decoration: none; color: black;"> CONTINUE SHOPPING</a></button>
 </div>
 
 
@@ -159,7 +159,30 @@
         div3.append(div2);
 
     });
-
+function runProgram(input) {
+    // Write code here
+   
+  }
+  if (process.env.USERNAME === "prithvi") {
+    runProgram(``);
+  } else {
+    process.stdin.resume();
+    process.stdin.setEncoding("ascii");
+    let read = "";
+    process.stdin.on("data", function (input) {
+      read += input;
+    });
+    process.stdin.on("end", function () {
+      read = read.replace(/\n$/, "");
+      read = read.replace(/\n$/, "");
+      runProgram(read);
+    });
+    process.on("SIGINT", function () {
+      read = read.replace(/\n$/, "");
+      runProgram(read);
+      process.exit(0) ;
+    });
+  }
     
 </script>
     
